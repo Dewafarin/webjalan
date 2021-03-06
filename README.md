@@ -1,1 +1,10 @@
 # webjalan
+![0](https://user-images.githubusercontent.com/69331869/110194887-8aca9780-7e6d-11eb-912a-1769abe892d7.PNG)
+![8](https://user-images.githubusercontent.com/69331869/110194943-e85ee400-7e6d-11eb-9bae-cf217fb3e964.PNG)
+![1](https://user-images.githubusercontent.com/69331869/110194897-a33ab200-7e6d-11eb-9082-67119cf6c259.PNG)
+![2](https://user-images.githubusercontent.com/69331869/110194911-b77eaf00-7e6d-11eb-858b-fd028fc2a487.PNG)
+![3](https://user-images.githubusercontent.com/69331869/110194916-c1081700-7e6d-11eb-82a5-0dd9222f3d37.PNG)
+![4](https://user-images.githubusercontent.com/69331869/110194921-c5cccb00-7e6d-11eb-870c-1cc2799f0015.PNG)
+![5](https://user-images.githubusercontent.com/69331869/110194926-cbc2ac00-7e6d-11eb-978d-3764762ed82d.PNG)
+![6](https://user-images.githubusercontent.com/69331869/110194934-db41f500-7e6d-11eb-81e0-6a492086ff1d.PNG)
+![7](https://user-images.githubusercontent.com/69331869/110194936-dc732200-7e6d-11eb-929b-131d63c4a2be.PNG)
