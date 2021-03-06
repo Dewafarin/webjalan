@@ -1,0 +1,759 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff5f5;
+}
+
+#overlay{
+    width: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 3;
+}
+
+#sidebar{
+    position: fixed;
+    overflow: hidden;
+    width: 0%;
+    background-color: #57c4ff;
+    height: 100%;
+    transition: 0.3s;
+}
+
+#sidebar .sidebartoggle{
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+
+#sidebar .sidebartoggle .side{
+    color: #fff5f5;
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 10px  3px;
+}
+
+#sidebar .sidebartoggle .side:hover{
+    transition: 0.3s;
+    background-color: #fff5f5;
+    color: #57c4ff;
+}
+
+
+
+#sidebar .sidebartoggle .logo{
+    width: 185px;
+    display: flex;
+    align-items: center;
+
+}
+
+#sidebar .sidebartoggle .logo a {
+    width: 75%;
+}
+
+
+#sidebar .sidebartoggle .logo a img{
+    width: 100%;
+}
+
+#sidebar nav {
+    position: relative;
+    margin-top: 20px;
+}
+
+
+
+#sidebar nav ul a{
+    text-decoration: none;
+    color: #fff5f5;
+    font-weight: bolder;
+}
+
+#sidebar nav ul a li{
+
+    padding: 20px 20px;
+    margin: 10px 0;
+}
+
+#sidebar nav ul a:last-child li{
+    border-top: 1px solid #fff5f5;
+    padding: 20px 20px;
+    margin: 200px 0;
+}
+
+#sidebar nav ul a li.active{
+    border-left: 10px solid #57c4ff;
+    background-color: #fff5f5;
+    color: #57c4ff;
+}
+
+#sidebar nav ul a:hover li{
+    background-color: #fffff5;
+    color: #57c4ff;
+}
+
+#sidebar nav ul a:last-child:hover li{
+    background-color: #fd4d4d;
+    color: #fff5f5;
+}
+
+
+#profile{
+    top: 70px;
+    box-shadow: 0 2px 4px #000;
+    border-radius: 2px;
+    position: absolute;
+    width: 200px;
+    display: none;
+    height: 100px;
+    background-color: #fff5f5;
+    right: 0;
+    margin: 5px;
+    z-index: 10;
+}
+
+#profile ul{
+    list-style: none;
+}
+
+#profile ul a{
+    font-weight: bolder;
+    color: #57c4ff;
+    text-decoration: none;
+}
+
+#profile ul a:hover li{
+    background-color: rgb(226, 225, 225);
+}
+
+#profile ul a li{
+    padding: 10px 10px;
+    margin: 7px 0;
+}
+
+header{
+    z-index: 1;
+    position: fixed;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: #fff5f5;
+    box-shadow: 0 0 2px #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .side{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+header .side:hover{
+    transition: 0.3s;
+    background-color: rgba(141, 141, 141, 0.5);
+    color: #fff5f5;
+}
+
+header .cariloc form{
+    display: flex;
+    border-radius:4px 0 0 4px;
+}
+
+
+
+header .cariloc form input[type="text"]{
+    width: 300px;
+    border: 1px inset #57c4ff;
+    border-radius:4px 0 0 4px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color:white;
+    height: 40px;
+}
+
+header .cariloc form input:focus{
+    outline: none;
+    border: 2px inset #57c4ff;
+    
+}
+
+header .cariloc form button{
+    border: none;
+    background-color: #57c4ff;
+    color: #fff5f5;
+    width: 50px;
+    height: 40px;
+}
+
+header .cariloc form button:focus{
+    border: none;
+    outline: none;
+}
+
+header .cariloc form button:hover{
+    transition: 0.2s;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+header .toggle {
+    margin-right: 50px;
+    user-select: none;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+}
+
+header .toggle a{
+
+    float: right;
+    font-size: 22px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+  
+}
+
+header .toggle a h4{
+    color: #57c4ff;
+    border-right: 3px solid #57c4ff;
+    padding-right: 5px;
+}
+
+
+header .toggle a .fotoprofile{
+    box-sizing: border-box;
+    border: 2px solid #57c4ff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 5px;
+ 
+}
+
+header .toggle a .fotoprofile img{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 38px;
+    min-width: 38px;
+    height: 100%;
+    max-height: 100%;
+}
+
+header .toggle a:hover h4{
+    transition: 0.3s;
+    color: grey;
+    border-right: 3px solid grey;
+
+}
+
+header .toggle a:hover .fotoprofile{
+    transition: 0.3s;
+    border: 2px solid grey;
+}
+
+.profileuser{
+    border-bottom: 2px solid #57c4ff ;
+    height: fit-content;
+    min-height:400px;
+    background-color: #fff5f5;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 90px 0 20px; 
+}
+
+.profileuser .foto{
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #57c4ff;
+}
+
+.profileuser .foto img{
+    position: absolute;
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.profileuser .foto :hover{
+    background: rgba(255, 255, 255, 0.8);
+    transition: 0.5s;
+}
+
+.profileuser .foto .custom-file-input{
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 245px 125px;
+    cursor: pointer;
+    
+}
+
+.profileuser .foto .custom-file-input::-webkit-file-upload-button{
+    visibility: hidden;
+}
+
+
+.profileuser .foto .custom-file-input::after{
+    overflow: hidden;
+    opacity: 0;
+    content: 'img/kamera.png';
+    display: block;
+    width: 300px;
+    height: 300px;
+    background: url(img/kamera.png)no-repeat center ;
+    background-size: 50px;
+    position: absolute;
+    right: 0;
+    
+}
+
+.profileuser .foto :hover .custom-file-input::after{
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.profileuser .nama{
+    color: rgb(49, 48, 48);
+    position: absolute;
+    margin-top: 220px;
+    padding: 0;
+}
+
+.profileuser .bio{
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 290px;
+    width: 90%;
+ 
+    height: fit-content;
+}
+
+.profileuser .bio #bionow{
+    height: fit-content;
+    width: 90%;
+
+    padding: 0;
+    margin-top: 0;
+    
+}
+
+.profileuser .bio #bionow span{
+    color: rgb(49, 48, 48);
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 90%;
+    overflow-wrap: break-word;
+    height: fit-content;
+
+    
+    
+}
+
+.profileuser .bio #bionow a{
+    
+    
+    cursor: pointer;
+    color: #57c4ff;
+
+    font-size: large;
+   
+
+    
+}
+
+
+.profileuser .bio #bionow a:hover{
+    transition: 0.3s;
+    color: #aaa;
+ 
+   
+
+    
+}
+
+
+.profileuser .bio #editbio{
+    display: none;
+    position: absolute;
+}
+
+.profileuser .bio #editbio form textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    display: block;
+    width: 400px;
+    height: 60px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 2px solid #57c4ff;
+    border-radius: 5px;
+    
+}
+
+.profileuser .bio #editbio form textarea:focus{
+    border: 3px solid #57c4ff;
+}
+
+.profileuser .bio #editbio form button{
+    border-radius: 5px;
+    color: white;
+    background-color: #57c4ff;
+    font-size: large;
+    width: 70px;
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+
+.profileuser .bio #editbio form button:hover{
+    border: 1px solid #abe0fc;
+}
+
+.button{
+    
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    background: transparent;
+    z-index: 1;
+}
+
+.button button{
+    padding: 10px 20px;
+    border: none;
+    color: rgb(49, 48, 48);
+    border-radius:  3px;
+    background: transparent;
+    z-index: 1;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: larger;
+}
+    
+.button button:hover{
+    transition: 0.3s;
+    background-color: #57c4ff;
+    color: white;
+}
+    
+.button button:focus{
+    border: none;
+    outline: none;
+}
+#uploadback{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 19;
+    display: none;
+    margin: auto;
+}
+
+#upload{
+    border-radius: 5px;
+    box-shadow: 2px 3px 4px #57c4ff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    z-index: 20;
+    position: fixed;
+    width: 650px;
+    background-color: white;
+    height: 630px;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+#upload .closebutton{
+    display: block;
+    text-align: right;  
+    height: 40px;     
+}
+
+#upload .closebutton a{
+    text-decoration: none;
+    float: right;
+    display: block;
+    width: 40px;  
+    box-sizing: border-box;
+    padding: 10px ;
+    text-align: center;
+    cursor: pointer; 
+}
+
+#upload .closebutton a:hover{
+    background-color: #eee;
+    color: grey;
+}
+
+#upload .closebutton a:focus{
+    border: none;
+    outline: none;
+}
+
+#upload .uploadgambar{
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+#upload .uploadgambar form{
+    text-align: center;
+    height: 100%;   
+}
+
+
+
+#upload input[type="file"] {
+    display: none;
+}
+
+#upload .custom-file-upload {
+    width: 90%;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 0;
+    cursor: pointer;
+    margin: 0 30px;
+    background-color: #57c4ff;
+    color: #fff5f5;
+    font-size: x-large;
+}
+
+#upload .bungkusimg {
+    position: absolute;
+    border-radius: 5px;
+    width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-height: 420px;   
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+
+
+#upload .bungkusimg img{
+    display: none;
+    width : 500px;
+    height : 100%;
+}
+
+#upload .uploadgambar form .bungkusbutton{
+    width:100%;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    margin-top: 460px;
+    align-items: center;
+    justify-content: center;   
+}
+
+#upload .uploadgambar form .bungkusbutton input[type="text"]{
+    width: 170px;
+    padding: 7px 10px;
+    margin-left: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: rgb(241, 236, 236);
+    margin-right: 50px;
+
+}
+
+#upload .uploadgambar form .bungkusbutton label{
+    padding-right: 5px;
+    font-size: x-large;
+    font-weight: 700;
+
+}
+
+#upload .uploadgambar form .bungkusbutton button{
+    background-color:  #2cb1f8 ;
+    color: #fff5f5;;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;  
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.containerfoto{  
+    min-height: 200px;
+    width: 80%;
+    margin: 10px auto;
+    margin: auto;   
+}
+
+
+
+.containerfoto .fotouser{ 
+    display: inline-flex;
+    height: 350px;
+    position: relative;
+    width: 350px;
+    margin: 10px 10px;
+    box-shadow: 0 1px 5px #aaa;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.containerfoto .fotouser .overlay{ 
+    opacity: 0;
+    height: 350px;
+     width: 350px;
+    position: relative;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.containerfoto .fotouser .overlay:hover{ 
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.containerfoto .fotouser img{ 
+    max-width: 600px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#preview{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+   display: none;
+    position: fixed;
+    z-index: 999;
+    width: 800px;
+    height: 100%;
+    margin: auto;
+}
+
+
+
+
+#preview .closebutton{
+    margin-bottom: 20px;
+    text-align: right;  
+}
+
+
+#preview .closebutton a{
+    position: relative;
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    top: 50px;
+    left: 200px;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+
+#preview .closebutton a:hover{
+    color: gray;  
+}
+
+
+#preview .fotopre{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    position: absolute;
+    height: 700px;  
+}
+
+#preview .fotopre img{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: relative;
+    width: auto;
+    height: auto;
+    max-width: 700px;
+    
+    max-height: 700px;
+
+}
+
+#prev,
+#next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#prev:hover,
+#next:hover {
+  background-color: rgba(50, 160, 233, 0.8);
+}
+
+footer{
+    
+    margin-top: 40px;
+    padding: 20px;
+    color: #fff5f5;
+    background-color:#57c4ff;
+    text-align: center;
+    border-top: 3px solid #fff5f5;
+}

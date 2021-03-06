@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(img/pantaibalekambang.png)no-repeat center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+header {
+    padding: 15px 0;
+
+
+
+}
+
+
+header img {
+
+
+    width: 140px;
+    padding: auto;
+
+
+}
+
+header .search {
+    align-items: center;
+    width: 40%;
+
+    justify-content: space-between;
+    display: flex;
+    height: 65px;
+}
+
+header .search form {
+    display: flex;
+
+    border-radius: 4px 0 0 4px;
+}
+
+
+
+input[type="text"] {
+
+    width: 300px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #fff5f5;
+    height: 40px;
+}
+
+input:focus {
+    border: none;
+    outline-style: inset;
+    outline-color: #57c4ff;
+
+}
+
+button {
+    border: none;
+    background-color: #fff5f5;
+    color: #57c4ff;
+    width: 50px;
+    height: 40px;
+
+
+
+
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+
+
+
+
+.toggle {
+    margin-left: 20px;
+    user-select: none;
+
+    align-items: center;
+    display: flex;
+
+    text-decoration: none;
+    color: #fff5f5;
+    font-size: xx-large;
+    font-weight: bolder;
+
+}
+
+.toggle a .fotoprofile {
+    box-sizing: border-box;
+    border: 2px solid #fff5f5;
+    float: right;
+    margin-right: 3px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.toggle a img {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 53px;
+    min-width: 53px;
+    height: 100%;
+    max-height: 100%;
+}
+
+.toggle a {
+
+    float: right;
+    font-size: 22px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+
+}
+
+.toggle a:hover .fotoprofile {
+
+    width: 52px;
+    height: 52px;
+
+}
+
+.toggle a:hover {
+    transition: 0.3s;
+    text-shadow: 1px 1px 1px black;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+#profile {
+    top: 70px;
+    box-shadow: 0 2px 4px #000;
+    border: 3px solid #57c4ff;
+    border-radius: 10px;
+    position: absolute;
+    width: 300px;
+    display: none;
+    height: 400px;
+    background-color: #fff5f5;
+    font-weight: bolder;
+    right: 0;
+    margin: 5px;
+    z-index: 3;
+}
+
+#profile .fotoprofileuser {
+    margin-top: 20px;
+    justify-content: center;
+
+    user-select: none;
+
+    align-items: center;
+    display: flex;
+
+    text-decoration: none;
+    color: #fff5f5;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#profile .fotoprofileuser a .fotoprofile {
+    box-sizing: border-box;
+    border: 2px solid #fff5f5;
+    float: right;
+    margin-right: 3px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#profile .fotoprofileuser a img {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 103px;
+    min-width: 103px;
+    height: 100%;
+    max-height: 100%;
+}
+
+#profile .fotoprofileuser a {
+    float: right;
+    font-size: 22px;
+    align-items: center;
+    display: flex;
+}
+
+#profile h2 {
+    color: #57c4ff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#profile hr {
+    width: 70%;
+    border-bottom: 3px solid #57c4ff;
+}
+
+#profile ul {
+    padding-top: 10px;
+    flex-direction: column;
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0;
+    height: 40%;
+    justify-content: space-between;
+}
+
+#profile ul li:first-child {
+    margin-left: 35px;
+}
+
+#profile ul li:last-child {
+    text-align: center;
+}
+
+#profile ul li a {
+    text-decoration: none;
+}
+
+#profile ul li a.profile {
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #57c4ff;
+}
+
+#profile ul li a.profile:hover {
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff5f5;
+    background-color: #aaa;
+}
+
+#profile ul li a.out {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(240, 63, 63);
+}
+
+#profile ul li a.out:hover {
+    box-shadow: 0 1px 2px black;
+}
+
+#main {
+    user-select: none;
+    width: 85%;
+    margin: auto;
+    text-shadow: 1px 1px 2px black;
+    position: relative;
+
+    min-height: 568px;
+
+
+}
+
+#main h1 {
+
+    font-size: 110px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #fff5f5;
+}
+
+#main h5 {
+
+    border-top: 5px solid #fff5f5;
+    font-size: 3vw;
+    margin-top: -90px;
+
+    color: #fff5f5;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding-left: 27px;
+    width: 50%;
+}
+
+footer {
+    padding: 20px;
+    color: #fff5f5;
+    background-color: #57c4ff;
+    text-align: center;
+    border-top: 3px solid #fff5f5;
+}
+
+@media(max-width: 876px) {
+    #main h1 {
+        font-size: 80px;
+    }
+}
+
+@media(max-width: 766px) {
+    .toggle {
+
+        text-align: right;
+        width: 100px;
+        padding: 20px 10px;
+        float: right;
+        text-decoration: none;
+        color: #fff5f5;
+        font-size: xx-large;
+        font-weight: bolder;
+
+    }
+
+    #main h1 {
+        padding-top: 120px;
+        text-align: center;
+        font-size: 10vw;
+    }
+
+    #main h5 {
+        width: 100%;
+        font-size: 6vw;
+        text-align: left;
+    }
+
+    header img {
+        float: left;
+    }
+
+
+
+    header form {
+        float: none;
+        margin-top: 80px;
+    }
+
+    input[type="text"] {
+        width: 75%;
+    }
+
+}

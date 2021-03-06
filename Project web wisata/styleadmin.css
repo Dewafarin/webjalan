@@ -1,0 +1,609 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#uploadback {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  display: block;
+  margin: auto;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: url(img/pantaibalekambang.png);
+  background-size: cover;
+  display: flex;
+}
+
+.container::after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1;
+}
+
+#profile {
+  top: 70px;
+  box-shadow: 0 2px 4px #000;
+  border-radius: 2px;
+  position: absolute;
+  width: 200px;
+  display: none;
+  height: 100px;
+  background-color: #fff5f5;
+  right: 0;
+  margin: 5px;
+  z-index: 10;
+}
+
+#profile ul {
+  list-style: none;
+}
+
+#profile ul a {
+  font-weight: bolder;
+  color: #57c4ff;
+  text-decoration: none;
+}
+
+#profile ul a:hover li {
+  background-color: rgb(226, 225, 225);
+}
+
+#profile ul a li {
+  padding: 10px 10px;
+  margin: 7px 0;
+}
+
+#container1 {
+  overflow: hidden;
+  z-index: 2;
+  width: 20%;
+  background-color: #57c4ff;
+  height: 100%;
+  transition: 0.2s;
+}
+
+#container1 .logo {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+#container1 .logo a {
+  justify-content: center;
+  display: flex;
+}
+
+#container1 .logo a img {
+  width: 55%;
+}
+
+#container1 nav {
+  position: relative;
+  margin-top: 20px;
+}
+
+#container1 nav ul a {
+  text-decoration: none;
+  color: #fff5f5;
+  font-weight: bolder;
+}
+
+#container1 nav ul a li {
+  padding: 20px 20px;
+  margin: 10px 0;
+}
+
+#container1 nav ul a:last-child li {
+  border-top: 1px solid #fff5f5;
+  padding: 20px 20px;
+  margin: 200px 0;
+}
+
+#container1 nav ul a li.active {
+  border-left: 10px solid #57c4ff;
+  background-color: #fff5f5;
+  color: #57c4ff;
+}
+
+#container1 nav ul a:hover li {
+  background-color: #fffff5;
+  color: #57c4ff;
+}
+
+#container1 nav ul a:last-child:hover li {
+  background-color: #fd4d4d;
+  color: #fff5f5;
+}
+
+#container2 {
+  width: 100%;
+  z-index: 3;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+}
+
+#container2 nav {
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  background-color: #fff5f5;
+  box-shadow: 0 0 2px #000;
+  display: flex;
+  justify-content: space-between;
+}
+
+#container2 nav .side {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+#container2 nav .side:hover {
+  transition: 0.3s;
+  background-color: rgba(141, 141, 141, 0.5);
+  color: #fff5f5;
+}
+
+#container2 nav .cariloc form {
+  display: flex;
+  border-radius: 4px 0 0 4px;
+}
+
+#container2 nav .cariloc form input[type="text"] {
+  width: 300px;
+  border: 1px inset #57c4ff;
+  border-radius: 4px 0 0 4px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: white;
+  height: 40px;
+}
+
+#container2 nav .cariloc form input:focus {
+  outline: none;
+  border: 2px inset #57c4ff;
+}
+
+#container2 nav .cariloc form button {
+  border: none;
+  background-color: #57c4ff;
+  color: #fff5f5;
+  width: 50px;
+  height: 40px;
+}
+
+#container2 nav .cariloc form button:focus {
+  border: none;
+  outline: none;
+}
+
+#container2 nav .cariloc form button:hover {
+  transition: 0.2s;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+#container2 nav .toggle {
+  margin-right: 50px;
+  user-select: none;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+}
+
+#container2 nav .toggle a {
+  float: right;
+  font-size: 22px;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+#container2 nav .toggle a h4 {
+  color: #57c4ff;
+  border-right: 3px solid #57c4ff;
+  padding-right: 5px;
+}
+
+#container2 nav .toggle a .fotoprofile {
+  box-sizing: border-box;
+  border: 2px solid #57c4ff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+#container2 nav .toggle a .fotoprofile img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  min-width: 38px;
+  height: 100%;
+  max-height: 100%;
+}
+
+#container2 nav .toggle a:hover h4 {
+  transition: 0.3s;
+  color: grey;
+  border-right: 3px solid grey;
+}
+
+#container2 nav .toggle a:hover .fotoprofile {
+  transition: 0.3s;
+  border: 2px solid grey;
+}
+
+#container2 .infobox {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+#container2 .infobox .userbox {
+  box-shadow: 0 1px 3px #fff;
+  border-radius: 7px;
+  color: white;
+  width: 30%;
+  height: 100%;
+  background-color: #55ff63;
+}
+
+#container2 .infobox .userbox .box {
+  padding: 30px 0;
+  text-align: center;
+}
+
+#container2 .infobox .fotobox {
+  box-shadow: 0 1px 3px #fff;
+  border-radius: 7px;
+  color: white;
+  width: 30%;
+  height: 100%;
+  background-color: grey;
+}
+
+#container2 .infobox .fotobox .box {
+  padding: 30px 0;
+  text-align: center;
+}
+
+#container2 .newuser {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#container2 .newuser h2 {
+  margin-bottom: 10px;
+  color: rgb(71, 70, 70);
+}
+
+#container2 .newuser .userbaru {
+  background-color: #fff;
+
+  box-shadow: 0 1px 4px #57c4ff;
+}
+
+#container2 .newuser .userbaru a {
+  text-decoration: none;
+  color: rgb(71, 70, 70);
+}
+
+#container2 .newuser .userbaru a:hover .pengguna {
+  background-color: rgb(219, 219, 219);
+  transition: 0.2s;
+}
+
+#container2 .newuser .userbaru a .pengguna {
+  align-items: center;
+  margin: 5px 0;
+  display: flex;
+  padding: 10px;
+}
+
+#container2 .newuser .userbaru a .pengguna .profileusernew {
+  margin-right: 10px;
+  border: 2px solid #57c4ff;
+  overflow: hidden;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+}
+
+#container2 .newuser .userbaru a .pengguna .profileusernew img {
+  width: 90px;
+  height: 90px;
+}
+
+#container2 .tambahdestinasi {
+  padding: 30px;
+  text-align: center;
+}
+
+#container2 .tambahdestinasi a {
+  text-decoration: none;
+  color: grey;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background: transparent;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-size: larger;
+  cursor: pointer;
+}
+
+#container2 .tambahdestinasi a:hover {
+  transition: 0.3s;
+  background-color: #57c4ff;
+  color: white;
+}
+
+#container2 .tambahdestinasi a:focus {
+  border: none;
+  outline: none;
+}
+
+#container2 #kumdestinasi {
+  width: 100%;
+  height: 77%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#container2 #kumdestinasi .destinasi {
+  justify-content: space-between;
+  padding: 10px;
+  display: flex;
+}
+
+#container2 #kumdestinasi .destinasi:hover {
+  background-color: rgba(230, 228, 228, 0.5);
+}
+
+#container2 #kumdestinasi .destinasi .datadestinasi {
+  display: flex;
+  align-items: center;
+}
+
+#container2 #kumdestinasi .destinasi .datadestinasi .bungkusimg {
+  border-radius: 5px;
+  width: 360px;
+  height: 220px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+#container2 #kumdestinasi .destinasi .datadestinasi .bungkusimg img {
+  width: 380px;
+  height: 240px;
+}
+
+#container2 #kumdestinasi .destinasi .datadestinasi .desc h1 {
+  color: rgb(65, 63, 63);
+}
+
+#container2 #kumdestinasi .destinasi .datadestinasi .desc h3 {
+  color: rgb(136, 134, 134);
+}
+
+#container2 #kumdestinasi .destinasi .action {
+  display: flex;
+  align-items: center;
+}
+
+#container2 #kumdestinasi .destinasi .action a.ubah {
+  color: rgb(41, 202, 41);
+  margin-right: 20px;
+}
+
+#container2 #kumdestinasi .destinasi .action a.ubah:hover {
+  color: rgb(128, 128, 128);
+}
+
+#container2 #kumdestinasi .destinasi .action a.hapus {
+  margin-right: 30px;
+  color: rgb(204, 7, 7);
+}
+
+#container2 #kumdestinasi .destinasi .action a.hapus:hover {
+  color: rgb(128, 128, 128);
+}
+
+#container2 #alluser {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 88%;
+  width: 80%;
+  margin: 12px auto 0;
+}
+
+#container2 #alluser .userf {
+  background-color: #fff;
+  box-shadow: 0 1px 4px #57c4ff;
+}
+
+#container2 #alluser .userf .alldatauser {
+  display: flex;
+}
+
+#container2 #alluser .userf .alldatauser a.bungkus {
+  width: 90%;
+  text-decoration: none;
+  color: rgb(71, 70, 70);
+}
+
+#container2 #alluser .userf .alldatauser:hover a.bungkus .pengguna {
+  background-color: rgb(219, 219, 219);
+  transition: 0.2s;
+}
+
+#container2 #alluser .userf .alldatauser:hover a.action {
+  transition: 0.3s;
+  width: 10%;
+}
+
+#container2 #alluser .userf .alldatauser a.bungkus .pengguna {
+  align-items: center;
+  margin: 5px 0;
+  display: flex;
+  padding: 10px;
+}
+
+#container2 #alluser .userf .alldatauser a.bungkus .pengguna .profileuser {
+  margin-right: 10px;
+  border: 2px solid #57c4ff;
+  overflow: hidden;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+}
+
+#container2 #alluser .userf .alldatauser a.bungkus .pengguna .profileuser img {
+  width: 90px;
+  height: 90px;
+}
+
+#container2 #alluser .userf .alldatauser a.bungkus .pengguna .infouser h3 {
+  display: inline;
+}
+
+#container2 #alluser .userf .alldatauser a.bungkus .pengguna .infouser h5.level {
+  display: inline;
+  color: green;
+}
+
+#container2 #alluser .userf .alldatauser a.action {
+  padding: 5px 0;
+  text-decoration: none;
+  width: 0;
+  overflow: hidden;
+}
+
+#container2 #alluser .userf .alldatauser a.action .action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(233, 15, 15, 0.7);
+  color: white;
+  height: 100%;
+}
+
+#container2 #alluser .userf .alldatauser a.action .action:hover {
+  transition: 0.3s;
+  background-color: white;
+  color: rgb(233, 15, 15);
+}
+
+#container2 #fotoalluser {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 85%;
+  text-align: center;
+}
+
+#container2 #fotoalluser .bungkusfoto {
+
+  transition: 0.3s;
+  display: inline-flex;
+  height: 330px;
+  position: relative;
+  width: 330px;
+  margin: 10px;
+  box-shadow: 0 1px 5px #aaa;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#container2 #fotoalluser .bungkusfoto img.fotouser {
+  max-width: 600px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#container2 #fotoalluser .bungkusfoto:hover .infofoto {
+  width: 80%;
+  transition: 0.3s;
+}
+
+#container2 #fotoalluser .bungkusfoto .infofoto {
+  color: #fff5f5;
+  overflow: hidden;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(45, 170, 253, 0.9);
+  position: absolute;
+}
+
+#container2 #fotoalluser .bungkusfoto .infofoto img {
+  border-radius: 100px;
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+#container2 #fotoalluser .bungkusfoto .infofoto h2 {
+  padding: 40px 0 0;
+}
+
+#container2 #fotoalluser .bungkusfoto .infofoto .hapusfoto {
+  float: right;
+}
+
+#container2 #fotoalluser .bungkusfoto .infofoto .hapusfoto a {
+  color: white;
+}
+
+#container2 #fotoalluser .bungkusfoto .infofoto .hapusfoto a i {
+  padding: 10px;
+}
+
+#container2 #fotoalluser .bungkusfoto .infofoto .hapusfoto a i:hover {
+  background-color: red;
+  padding: 10px;
+}
+
+
+/* #container2 #popup{
+  text-align: center;
+  padding:20px;
+  z-index: 999;
+  position: absolute;
+  color: red;
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+} */
